@@ -4,6 +4,12 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.perfectidea.exam.Application;
+import com.perfectidea.exam.app_config;
+import com.perfectidea.exam.enumeration.FavoriteCategory;
+
+import android.content.SharedPreferences;
+import android.provider.Settings.Secure;
 import android.util.Base64;
 
 public class ShareFunction {
@@ -22,6 +28,41 @@ public class ShareFunction {
 			}
 		}
 		return instance;
+	}
+
+	public boolean licenseBuyingStatus(String licenseId) {
+		boolean status = false;
+		SharedPreferences pref = Application.getInstance().getSharedPref();
+
+		status = pref.getBoolean(licenseId, false);
+
+		return status;
+	}
+
+	public String GetExamOption(String key) {
+		if (key.equals(app_config.licenseTag)) {
+			return "證照";
+		} else if (key.equals(app_config.subjectTag)) {
+			return "科目";
+		} else if (key.equals(app_config.sectionTag)) {
+			return "單元";
+		} else if (key.equals(app_config.categoryTag)) {
+			return "類別";
+		}
+		return "";
+	}
+
+	public String GetCategoryName(FavoriteCategory key) {
+		switch (key) {
+		case all:
+			return "全部";
+		case favorite:
+			return "自選";
+		case error:
+			return "錯誤";
+		default:
+			return "";
+		}
 	}
 
 	/**
@@ -44,6 +85,12 @@ public class ShareFunction {
 			occus.add(i);
 		}
 		return occus;
+	}
+	
+	public String GetDeviceId() {
+		String deviceId = Secure.getString(Application.getInstance().getContentResolver(),
+                Secure.ANDROID_ID);
+		return deviceId;
 	}
 
 	/**

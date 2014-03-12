@@ -60,6 +60,14 @@ public class app_config {
 	public static final String licenseSec07 = "sec07";
 	public static final String licenseSec08 = "sec08";
 	
+	public final static String sharedPrefTag = "examSharedPreferencesTag";
+	
+	public final static String licenseTag = "license.key";
+	public final static String subjectTag = "subject.key";
+	public final static String sectionTag = "section.key";
+	public final static String categoryTag = "category.key";
+	
+	
 	/**
 	 * Parse.framework application id
 	 * */

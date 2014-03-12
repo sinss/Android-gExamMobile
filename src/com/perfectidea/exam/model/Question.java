@@ -3,12 +3,13 @@ package com.perfectidea.exam.model;
 public class Question {
 	private boolean errorInd;
 	private String Id;
+	private String license;
 	private String subject;
 	private String section;
 	private String period;
 	private String answer;
 	private String content;
-	private String otpion1;
+	private String option1;
 	private String option2;
 	private String option3;
 	private String option4;
@@ -25,6 +26,12 @@ public class Question {
 	}
 	public void setId(String id) {
 		Id = id;
+	}
+	public String getLicense() {
+		return license;
+	}
+	public void setLicense(String license) {
+		this.license = license;
 	}
 	public String getSubject() {
 		return subject;
@@ -56,11 +63,11 @@ public class Question {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getOtpion1() {
-		return otpion1;
+	public String getOption1() {
+		return option1;
 	}
-	public void setOtpion1(String otpion1) {
-		this.otpion1 = otpion1;
+	public void setOption1(String option1) {
+		this.option1 = option1;
 	}
 	public String getOption2() {
 		return option2;

@@ -8,7 +8,8 @@ public class Course {
 	private Integer sectionAmount;
 	private Integer examTime;
 	private Integer totalGrade;
-	private Integer licenseId;
+	private Integer passGrade;
+	private String licenseId;
 	private Integer subjectId;
 	private Integer sectionId;
 	private Number grades;
@@ -54,10 +55,16 @@ public class Course {
 	public void setTotalGrade(Integer totalGrade) {
 		this.totalGrade = totalGrade;
 	}
-	public Integer getLicenseId() {
+	public Integer getPassGrade() {
+		return passGrade;
+	}
+	public void setPassGrade(Integer passGrade) {
+		this.passGrade = passGrade;
+	}
+	public String getLicenseId() {
 		return licenseId;
 	}
-	public void setLicenseId(Integer licenseId) {
+	public void setLicenseId(String licenseId) {
 		this.licenseId = licenseId;
 	}
 	public Integer getSubjectId() {

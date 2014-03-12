@@ -41,10 +41,10 @@ public class ExamLog {
 	public void setPassGrade(Integer passGrade) {
 		this.passGrade = passGrade;
 	}
-	public String getLcienseId() {
+	public String getLicenseId() {
 		return lcienseId;
 	}
-	public void setLcienseId(String lcienseId) {
+	public void setLicenseId(String lcienseId) {
 		this.lcienseId = lcienseId;
 	}
 	public Integer getSubjectId() {

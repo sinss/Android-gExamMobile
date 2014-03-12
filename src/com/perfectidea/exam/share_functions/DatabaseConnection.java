@@ -331,4 +331,59 @@ public class DatabaseConnection {
 	public void closeSec08() {
 		sec08.close();
 	}
+	
+	public SQLiteDatabase GetQuestionDatabase(String licenseId) {
+		if (licenseId.equals(app_config.licenseId1)) {
+			return fin00.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseId2)) {
+			return ins01.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseId3)) {
+			return ins02.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseId4)) {
+			return ins03.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseId5)) {
+			return ins04.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseBank01)) {
+			return bank01.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseBank02)) {
+			return bank02.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseBank05)) {
+			return bank05.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseBank06)) {
+			return bank06.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec01)) {
+			return sec01.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec02)) {
+			return sec02.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec03)) {
+			return sec03.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec04)) {
+			return sec04.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec05)) {
+			return sec05.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec06)) {
+			return sec06.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec07)) {
+			return sec07.getReadableDatabase();
+		}
+		else if (licenseId.equals(app_config.licenseSec08)) {
+			return sec08.getReadableDatabase();
+		}
+		return controlHelper.getWritableDatabase();
+	}
 }
